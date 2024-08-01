@@ -70,7 +70,7 @@ jobs:
     - name: Deploy
       run: |-
         if kubectl get deployment myfirst-deployment;
-           then kubectl delete deployment/myfirst-deployment
+           then kubectl delete deployment/myfirst-deployment; fi
         kubectl apply -f deployment.yaml
         kubectl apply -f service.yaml
         kubectl get pods
