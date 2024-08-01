@@ -69,7 +69,8 @@ jobs:
     # Deploy the Docker image to the GKE cluster
     - name: Deploy
       run: |-
+        if kubectl get deployment myfirst-deployment;
+           then kubectl delete deployment/myfirst-deployment; fi
         kubectl apply -f deployment.yaml
-        kubectl rollout restart deployment/myfirst-deployment
         kubectl apply -f service.yaml
         kubectl get pods
