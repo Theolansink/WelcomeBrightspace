@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: web-app
-        image: us-central1-docker.pkg.dev/kubernetis-291512/dockercontainer/mycontainer
+        image: us-central1-docker.pkg.dev/kubernetis-291512/dockercontainer/mycontainer:latest
 #        image: theolansink/container:latest
         ports:
         - containerPort: 80  # the port the container is listening
